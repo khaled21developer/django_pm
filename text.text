@@ -1,0 +1,65 @@
+إنشاء مجلد جديد:
+mkdir {directory_name}
+نضيف مكان {directory_name} اسم المجلد الجديد.
+
+تفعيل البيئة الإفتراضية:
+pipenv shell
+تثبيت جانغو Django:
+pipenv install django
+إنشاء مشروع جانغو جديد:
+django-admin startproject {project_name} .
+نضيف مكان {project_name} اسم المشروع.
+
+تشغيل مشروع جانغو:
+python .\manage.py runserver
+إنشاء تطبيق جانغو جديد:
+python .\manage.py startapp {app_name}
+نضيف مكان {app_name} اسم التطبيق.
+
+رابط موقع GitHub.
+تهيئة المستودع المحلي:
+git init
+إضافة الملفات والمستودعات إلى المستودع:
+git add .
+إيداع التغييرات:
+git commit -m "{message}"
+نضيف مكان {message} رسالة وصف.
+
+تحديد الفرع branch:
+git branch -M {branch_name}
+نضيف مكان {branch_name} اسم الفرع.
+
+إضافة رابط المستودع البعيد:
+git remote add origin {repo_url}
+نضيف مكان {repo_url} رابط المستودع البعيد.
+
+رفع التغييرات:
+git push origin {branch_name}
+نضيف مكان {branch_name} اسم الفرع.
+
+
+
+بخصوص مشكلة LF و CRF أرجو تنفيذ الأمر التالي لتخطي تلك المشكلة:
+
+git config --global core.autocrlf false
+
+عند حدوث خطأ
+حاول استخدام الأمر التالي
+
+git remote set-url origin https://github.com/khaled21developer/django_pm.git
+ثم التجربة مرة أخرى
+
+git push -u origin main
+
+
+
+إنشاء ملفات التهجير:
+python manage.py makemigrations
+تشغيل ملفات التهجير:
+python manage.py migrate
+رفع التغييرات إلى مستودع GitHub:
+git add .
+
+git commit -m "Initiate project models"
+
+git push
