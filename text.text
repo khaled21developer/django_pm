@@ -57,6 +57,7 @@ git push -u origin main
 python manage.py makemigrations
 تشغيل ملفات التهجير:
 python manage.py migrate
+
 رفع التغييرات إلى مستودع GitHub:
 git add .
 
