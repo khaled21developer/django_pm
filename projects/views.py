@@ -7,6 +7,15 @@ from . import forms
 class ProjectListView(ListView):
     model = models.Project
     template_name = 'project/list.html'
+    paginate_by = 3
+
+    def get_queryset(self):
+        query_set = super().get_queryset()  # استدعاء مجموعة الاستعلام الأساسية
+        where = {}
+        q = self.request.GET.get('q', None)  # الحصول على قيمة البحث من GET
+        if q:
+            where['title__icontains'] = q  # استخدم __icontains بدلاً من _icontains
+        return query_set.filter(**where)  # تطبيق الفلترة على مجموعة الاستعلام
 
 
 class ProjectCreateView(CreateView):
