@@ -14,11 +14,11 @@
                 />
             </form>
             <p class="my-auto me-auto">
-                    {{ task.description }}
+                {{ task.description }}
             </p>
-             <form method="post" action="{% url 'Task_delete' task.id %}">
+            <form method="post" action="{% url 'Task_delete' task.id %}">
                 {% csrf_token %}
-                 <button type="submit" class="btn"><i class="bi bi-trash text-danger"></i></button>
+                <button type="submit" class="btn"><i class="bi bi-trash text-danger"></i></button>
             </form>
         </li>
     {% endfor %}
@@ -26,11 +26,11 @@
 
 <div class="card mt-2">
     <form method="post" action="{% url 'Task_create' %}" class="d-flex">
-    {% csrf_token %}
-    <div class="input-group">
-        <input type="hidden" value="{{ project.id }}" name="project">
-        <input type="text" name="description" class="form-control" placeholder="{% trans 'New Task' %}" required/>
-        <input type="submit" class="btn btn outline-dark" value="{% trans 'Add' %}"/>
-    </div>
-</form>
+        {% csrf_token %}
+        <div class="input-group">
+            <input type="hidden" value="{{ project.id }}" name="project">
+            <input type="text" name="description" class="form-control" placeholder="{% trans 'New Task' %}" required/>
+            <input type="submit" class="btn btn outline-dark" value="{% trans 'Add' %}"/>
+        </div>
+    </form>
 </div>

@@ -2,6 +2,7 @@
 mkdir {directory_name}
 نضيف مكان {directory_name} اسم المجلد الجديد.
 
+
 تفعيل البيئة الإفتراضية:
 pipenv shell
 تثبيت جانغو Django:
@@ -10,11 +11,13 @@ pipenv install django
 django-admin startproject {project_name} .
 نضيف مكان {project_name} اسم المشروع.
 
+
 تشغيل مشروع جانغو:
 python .\manage.py runserver
 إنشاء تطبيق جانغو جديد:
 python .\manage.py startapp {app_name}
 نضيف مكان {app_name} اسم التطبيق.
+
 
 رابط موقع GitHub.
 تهيئة المستودع المحلي:
@@ -25,13 +28,16 @@ git add .
 git commit -m "{message}"
 نضيف مكان {message} رسالة وصف.
 
+
 تحديد الفرع branch:
 git branch -M {branch_name}
 نضيف مكان {branch_name} اسم الفرع.
 
+
 إضافة رابط المستودع البعيد:
 git remote add origin {repo_url}
 نضيف مكان {repo_url} رابط المستودع البعيد.
+
 
 رفع التغييرات:
 git push origin {branch_name}
@@ -42,6 +48,7 @@ git push origin {branch_name}
 بخصوص مشكلة LF و CRF أرجو تنفيذ الأمر التالي لتخطي تلك المشكلة:
 
 git config --global core.autocrlf false
+
 
 عند حدوث خطأ
 حاول استخدام الأمر التالي
@@ -58,9 +65,17 @@ python manage.py makemigrations
 تشغيل ملفات التهجير:
 python manage.py migrate
 
+
 رفع التغييرات إلى مستودع GitHub:
 git add .
 
 git commit -m "Initiate project models"
 
 git push
+
+
+إنشاء مستخدم جديد في جانغو:
+python manage.py createsuperuser --username={username} --email={email}
+نضيف مكان {username} اسم المستخدم، ومكان {email} عنوان بريده الإلكتروني.
+
+
