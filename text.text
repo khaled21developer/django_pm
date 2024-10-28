@@ -79,3 +79,23 @@ python manage.py createsuperuser --username={username} --email={email}
 نضيف مكان {username} اسم المستخدم، ومكان {email} عنوان بريده الإلكتروني.
 
 
+توثيق RTL من Bootstrap.
+رابط تنزيل gettext.
+إنشاء ملفات الترجمة:
+python .\manage.py makemessages -l {language_code}
+نضيف مكان {language_code} رمز اللغة. مثلاً: ar للغة العربية، en للغة الإنجليزية.
+
+تحويل ملفات الترجمة إلى ملفات لغة يقبلها جانغو:
+python .\manage.py compilemessages
+
+
+تفعيل البيئة الإفتراضية:
+pipenv shell
+قائمة المكاتب المثبتة:
+
+pip list
+
+
+إنشاء مستخدم جديد يملك صلاحيات المدير:
+python .\manage.py createsuperuser --username={username} --email={email}
+نضيف مكان {username} اسم المستخدم، ومكان {email} عنوان بريده الإلكتروني.

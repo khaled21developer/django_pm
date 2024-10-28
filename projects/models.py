@@ -1,7 +1,8 @@
 from django.db import models
 # اضافة USER FROM DJANGO
 from django.conf.global_settings import AUTH_USER_MODEL
-# Create your models here.
+# للترجمة للعربية
+from django.utils.translation import gettext_lazy as _
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
@@ -12,10 +13,10 @@ class Category(models.Model):
 
 # نموذج مساعد لتمثيل حالة المشروع IntegerChoices
 class ProjectStatus(models.IntegerChoices):
-    PENDING = 1, 'Pending'
-    COMPLETED = 2, 'Completed'
-    POSTPONED = 3, 'Postponed'
-    CANCELED = 4, 'Canceled'
+    PENDING = 1, _('Pending')
+    COMPLETED = 2, _('Completed')
+    POSTPONED = 3, _('Postponed')
+    CANCELED = 4, _('Canceled')
 
 
 class Project(models.Model):

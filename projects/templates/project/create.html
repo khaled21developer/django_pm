@@ -10,9 +10,11 @@
                 <div class="card-body">
                     <form method="POST">
                         {% csrf_token %}
+<!--                        غير مقبولة الطريقة بسبب الاختراق والتعديل على المستخدم-->
+<!--                        <input type="hidden" value="{{ user.id }}" name="user_id" />-->
                         {% include 'common/form.html' with form=form %}
                         <button class="btn btn-success">
-                            {% translate 'Create' %}
+                            {% trans 'Create' %}
                         </button>
                     </form>
                 </div>
