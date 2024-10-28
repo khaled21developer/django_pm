@@ -10,6 +10,11 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = _('Category')
+        # للكلمات الجمع
+        verbose_name_plural = _('Category')
+
 
 # نموذج مساعد لتمثيل حالة المشروع IntegerChoices
 class ProjectStatus(models.IntegerChoices):
@@ -38,6 +43,11 @@ class Project(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        verbose_name = _('Project')
+        # للكلمات الجمع
+        verbose_name_plural = _('Project')
+
 class Task(models.Model):
     description = models.TextField()
     is_completed = models.BooleanField(default=False)
@@ -45,3 +55,8 @@ class Task(models.Model):
 
     def __str__(self):
         return self.description
+
+    class Meta:
+        verbose_name = _('Task')
+        # للكلمات الجمع
+        verbose_name_plural = _('Task')
