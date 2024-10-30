@@ -27,6 +27,8 @@ git add .
 إيداع التغييرات:
 git commit -m "{message}"
 نضيف مكان {message} رسالة وصف.
+لرفع التغييرات للمستودع
+git push
 
 
 تحديد الفرع branch:
@@ -99,3 +101,15 @@ pip list
 إنشاء مستخدم جديد يملك صلاحيات المدير:
 python .\manage.py createsuperuser --username={username} --email={email}
 نضيف مكان {username} اسم المستخدم، ومكان {email} عنوان بريده الإلكتروني.
+
+
+لحل مشكلة Pipfile
+حاول تحديث ملف Pipfile.lock أولاً من خلال:
+
+pipenv lock
+ثم تثبيت الحزم التي به:
+
+pipenv install
+pipenv shell.
+تنزيل المكتبة
+exit
