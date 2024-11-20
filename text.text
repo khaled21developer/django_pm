@@ -113,3 +113,14 @@ pipenv install
 pipenv shell.
 تنزيل المكتبة
 exit
+
+
+لتثبيت أي مشروع من github
+نسخ المستودع git clone https://github.com/HsoubAcademy/django-store
+الانتقال إلى المجلد cd django-store
+تثبيت التطبيق pip install -r requirements.txt
+تشغيل ملفات التهجير python manage.py migrate
+تشغيل المشروع python manage.py runserver
+
+للترجمة
+py manage.py makemessages  -l ar -i .venv

@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, include
 import debug_toolbar
@@ -23,9 +24,12 @@ admin.site.site_header = _('Projects Management')
 admin.site.site_title = _('Projects Management')
 
 urlpatterns = [
+    path('i18n/', include('django.conf.urls.i18n')),
     path('__debug__/', include(debug_toolbar.urls)),
-    path('', include('projects.urls')),
-    path('accounts/', include('accounts.urls')),
     path('admin/', admin.site.urls),
 ]
 
+urlpatterns += i18n_patterns(
+    path('', include('projects.urls')),
+    path('accounts/', include('accounts.urls')),
+)

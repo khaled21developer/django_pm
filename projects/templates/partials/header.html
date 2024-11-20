@@ -14,7 +14,26 @@
                    <li class="nav-item">
                        <a class="nav-link" aria-current="page" href="{% url 'Project_list' %}">{% trans 'Home' %}</a>
                    </li>
+                   <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           {% trans 'Language' %}
+                       </a>
+                       <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                           {% get_current_language as LANGUAGE_CODE %}
+                           {% get_available_languages as LANGUAGES %}
+                           {% get_language_info_list for LANGUAGES as languages %}
+                           {% for language in languages %}
+                               <li>
+                                   <a class="dropdown-item {% if language.code == LANGUAGE_CODE %} active{% endif %}" href="/{{ language.code }}/{{ request.get_full_path_info|slice:'4:' }}">
+                                       {{ language.name_local }}
+                                   </a>
+                               </li>
+                           {% endfor %}
+                       </ul>
+                   </li>
+                   </lidr>
                </ul>
+
                {% if user.is_authenticated %}
                    <ul class="navbar-nav mb-2 mb-lg-0 me-3">
                        <li class="nav-item dropdown">
@@ -48,10 +67,10 @@
                        </div>
                    </form>
                {% else %}
-                  <a class="btn btn-outline-light mx-2" href="{% url 'register' %}">
-                    {% trans 'Register' %}
-                  </a>
-                  <a class="btn btn-outline-light" href="{% url 'login' %}">
+                   <a class="btn btn-outline-light mx-2" href="{% url 'register' %}">
+                       {% trans 'Register' %}
+                   </a>
+                   <a class="btn btn-outline-light" href="{% url 'login' %}">
                        {% trans 'Login' %}
                    </a>
                {% endif %}

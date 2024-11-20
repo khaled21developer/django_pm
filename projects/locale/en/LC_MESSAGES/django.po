@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-18 15:19+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\projects\forms.py:12 .\projects\forms.py:28 .\projects\models.py:14
+#: .\projects\models.py:16
+msgid "Category"
+msgstr ""
+
+#: .\projects\forms.py:13 .\projects\forms.py:29
+msgid "Title"
+msgstr ""
+
+#: .\projects\forms.py:14
+msgid "Description"
+msgstr ""
+
+#: .\projects\forms.py:30
+msgid "Status"
+msgstr ""
+
+#: .\projects\models.py:21
+msgid "Pending"
+msgstr ""
+
+#: .\projects\models.py:22
+msgid "Completed"
+msgstr ""
+
+#: .\projects\models.py:23
+msgid "Postponed"
+msgstr ""
+
+#: .\projects\models.py:24
+msgid "Canceled"
+msgstr ""
+
+#: .\projects\models.py:47 .\projects\models.py:49
+msgid "Project"
+msgstr ""
+
+#: .\projects\models.py:60 .\projects\models.py:62
+msgid "Task"
+msgstr ""
+
+#: .\projects\templates\base.html:7 .\projects\templates\partials\header.html:5
+msgid "Projects Management"
+msgstr ""
+
+#: .\projects\templates\partials\footer.html:11
+msgid "All rights reserved. © 2024 KhaledCodes"
+msgstr ""
+
+#: .\projects\templates\partials\header.html:15
+msgid "Home"
+msgstr ""
+
+#: .\projects\templates\partials\header.html:25
+msgid "Profile"
+msgstr ""
+
+#: .\projects\templates\partials\header.html:30
+msgid "Logout"
+msgstr ""
+
+#: .\projects\templates\partials\header.html:42
+msgid "Search"
+msgstr ""
+
+#: .\projects\templates\partials\header.html:52
+msgid "Register"
+msgstr ""
+
+#: .\projects\templates\partials\header.html:55
+msgid "Login"
+msgstr ""
+
+#: .\projects\templates\project\create.html:8
+msgid "New Project"
+msgstr ""
+
+#: .\projects\templates\project\create.html:17
+msgid "Create"
+msgstr ""
+
+#: .\projects\templates\project\delete.html:4
+msgid "Alert"
+msgstr ""
+
+#: .\projects\templates\project\delete.html:8
+msgid "Are you sure to delete"
+msgstr ""
+
+#: .\projects\templates\project\delete.html:11
+#: .\projects\templates\project\update.html:46
+msgid "Delete"
+msgstr ""
+
+#: .\projects\templates\project\list.html:7
+msgid "My Projects"
+msgstr ""
+
+#: .\projects\templates\project\list.html:10
+#: .\projects\templates\project\list.html:52
+msgid "New Projects"
+msgstr ""
+
+#: .\projects\templates\project\list.html:35
+msgid "Edit"
+msgstr ""
+
+#: .\projects\templates\project\list.html:47
+msgid "There are no projects to show"
+msgstr ""
+
+#: .\projects\templates\project\list.html:64
+#: .\projects\templates\project\list.html:69
+msgid "Previous"
+msgstr ""
+
+#: .\projects\templates\project\list.html:75
+#: .\projects\templates\project\list.html:80
+msgid "Next"
+msgstr ""
+
+#: .\projects\templates\project\task.html:32
+msgid "New Task"
+msgstr ""
+
+#: .\projects\templates\project\task.html:33
+msgid "Add"
+msgstr ""
+
+#: .\projects\templates\project\update.html:42
+msgid "Save"
+msgstr ""
